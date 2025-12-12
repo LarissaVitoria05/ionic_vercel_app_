@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="goFavorites()">Favoritos</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngIf="loading">Carregando...</div>
+  <div *ngIf="book">
+    <img [src]="book.cover" (click)="openDetails()" style="max-width:100%;border-radius:8px;cursor:pointer" />
+    <h2>Livro {{book.number}} - {{book.originalTitle}}</h2>
+  </div>
+</ion-content>
