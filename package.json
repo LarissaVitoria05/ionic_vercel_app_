@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "ionic serve",
-    "build": "ionic build",
+    "build": "ng build"
     "lint": "ng lint"
   },
   "dependencies": {
