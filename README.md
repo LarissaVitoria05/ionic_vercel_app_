@@ -17,7 +17,7 @@ O projeto foi desenvolvido como atividade prática da disciplina, utilizando Ion
 **>> TELA DE FAVORITOS DA APLICAÇÃO:**
 <img width="1599" height="732" alt="image" src="https://github.com/user-attachments/assets/7a15fff2-9220-435b-b933-92b21af40555" />
 
-**>> TELA DE NOVOS LIVROS ALEATÓRIOS DA APLICAÇÃO:**
+**>> TELA DE NOVOS LIVROS ALEATÓRIOS DA APLICAÇÃO:** (Para buscar um novo livro no aplicativo, basta clicar no botão **"NOVO LIVRO ALEATÓRIO"** e a aplicação mudará automaticamente para a capa do próximo livro,  incluindo seus detalhes e sua numeração).
 <img width="1600" height="720" alt="image" src="https://github.com/user-attachments/assets/a72524eb-670c-454a-bdce-da730385c1f1" />
 
 
