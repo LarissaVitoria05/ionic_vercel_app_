@@ -1,6 +1,6 @@
 📚 ionic_vercel_app
 
-Aplicação de exemplo desenvolvida com Ionic + Angular, consumindo a API pública do Harry Potter, com navegação entre telas, persistência de dados e foco em um layout intuitivo e eficiente com boas práticas de front-end.
+Aplicação de exemplo desenvolvida com Ionic + Angular, consumindo a API pública do Harry Potter, com navegação entre telas, persistência de dados, com foco em um layout intuitivo e eficiente com boas práticas de front-end.
 
 🧙‍♂️ Descrição do Projeto:
 
