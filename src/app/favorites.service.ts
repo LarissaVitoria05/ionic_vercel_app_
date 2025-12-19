@@ -20,6 +20,12 @@ export class FavoritesService {
     }
   }
 
+  remove(book: any) {
+    const list = this.getAll();
+    const filtered = list.filter(b => !(b.number === book.number && b.originalTitle === book.originalTitle));
+    localStorage.setItem(KEY, JSON.stringify(filtered));
+  }
+
   clear() {
     localStorage.removeItem(KEY);
   }

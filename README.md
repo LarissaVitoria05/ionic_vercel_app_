@@ -1,19 +1,9 @@
-# ionic_vercel_app
+📚 ionic_vercel_app
 
-Aplicação de exemplo para a atividade: Ionic + Angular consumindo API Harry Potter.
+Aplicação de exemplo desenvolvida com Ionic + Angular, consumindo a API pública do Harry Potter, com navegação entre telas, persistência de dados e foco em boas práticas de front-end.
 
-Requisitos implementados:
-- Nome do projeto: ionic_vercel_app
-- 3 telas: Home, Details, Favorites
-- Consumo da API: https://potterapi-fedeperin.vercel.app/en/books/random
-- Persistência via localStorage (chave: favoritesBooks)
-- README com instruções e screenshots (adicionar imagens reais antes de enviar)
-- Licença Creative Commons (ver LICENSE)
+🧙‍♂️ Descrição do Projeto
 
-Como rodar (local):
-1. Instale dependências: `npm install`
-2. Rodar em desenvolvimento: `npm run start` (ou `ionic serve`)
+O ionic_vercel_app é uma aplicação web que consome uma API de livros da saga Harry Potter, exibindo informações detalhadas sobre cada livro, permitindo favoritar títulos e navegar entre diferentes telas de forma fluida, sem recarregamento da página.
 
-Build para produção:
-- `npm run build` seguido da configuração para deploy no Vercel.
-
+O projeto foi desenvolvido como atividade prática da disciplina, utilizando Ionic Framework integrado ao Angular, seguindo os requisitos propostos pelo professor.

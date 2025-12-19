@@ -8,25 +8,38 @@ import { BooksService } from '../books.service';
 })
 export class HomePage {
   book: any = null;
-  loading = false;
+  isLoading = false;
+  
   constructor(private books: BooksService, private router: Router) {
-    this.load();
+    this.loadRandomBook();
   }
 
-  async load(){
-    this.loading = true;
+  async loadRandomBook(){
+    this.isLoading = true;
     try {
       this.book = await this.books.getRandomBook();
     } catch(e) {
       console.error(e);
     } finally {
-      this.loading = false;
+      this.isLoading = false;
     }
   }
 
+  refreshBook() {
+    this.loadRandomBook();
+  }
+
+  getDescriptionPreview(): string {
+    if (!this.book?.description) return '';
+    return this.book.description.length > 150 
+      ? this.book.description.substring(0, 150)
+      : this.book.description;
+  }
+
   openDetails(){
-    // pass data via navigation state
-    this.router.navigate(['/details'], { state: { book: this.book } });
+    if (this.book) {
+      this.router.navigate(['/details'], { state: { book: this.book } });
+    }
   }
 
   goFavorites(){
