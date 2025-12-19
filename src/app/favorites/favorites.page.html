@@ -1,6 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Meus Favoritos</ion-title>
+
     <ion-buttons slot="end" *ngIf="favorites.length">
       <ion-button (click)="clearAllFavorites()">
         <ion-icon name="trash"></ion-icon>
@@ -11,9 +12,13 @@
 
 <ion-content class="ion-padding">
 
+  <!-- LISTA DE FAVORITOS -->
   <ion-card *ngFor="let book of favorites" class="favorite-card">
+
     <ion-card-header>
-      <ion-card-title>{{ book.originalTitle || book.title }}</ion-card-title>
+      <ion-card-title>
+        {{ book.originalTitle || book.title }}
+      </ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
@@ -38,7 +43,9 @@
         </div>
       </div>
 
+      <!-- AÇÕES -->
       <div class="card-actions">
+
         <ion-button expand="block" (click)="viewDetails(book)">
           <ion-icon name="eye" slot="start"></ion-icon>
           Ver Detalhes
@@ -53,11 +60,13 @@
           <ion-icon name="heart-dislike" slot="start"></ion-icon>
           Remover
         </ion-button>
+
       </div>
 
     </ion-card-content>
   </ion-card>
 
+  <!-- ESTADO VAZIO -->
   <div *ngIf="!favorites.length" class="empty-state">
     <ion-card>
       <ion-card-content class="ion-text-center">
@@ -68,7 +77,13 @@
     </ion-card>
   </div>
 
-  <ion-button expand="block" fill="outline" routerLink="/home">
+  <!-- BOTÃO VOLTAR HOME (CORRIGIDO) -->
+  <ion-button
+    expand="block"
+    fill="outline"
+    color="primary"
+    (click)="goHome()"
+  >
     <ion-icon name="home" slot="start"></ion-icon>
     Voltar para Home
   </ion-button>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 import { FavoritesService } from '../favorites.service';
 
 @Component({
@@ -8,26 +8,38 @@ import { FavoritesService } from '../favorites.service';
 })
 export class FavoritesPage {
   favorites: any[] = [];
-  
-  constructor(private fav: FavoritesService, private router: Router) {
+
+  constructor(
+    private favoritesService: FavoritesService,
+    private navCtrl: NavController
+  ) {}
+
+  ionViewWillEnter() {
     this.loadFavorites();
   }
-  
-  loadFavorites(){
-    this.favorites = this.fav.getAll();
+
+  loadFavorites() {
+    this.favorites = this.favoritesService.getAll();
   }
 
   viewDetails(book: any) {
-    this.router.navigate(['/details'], { state: { book } });
+    if (!book) return;
+
+    const id = book.id || book.number;
+    this.navCtrl.navigateForward(`/details/${id}`);
   }
 
   removeFavorite(book: any) {
-    this.fav.remove(book);
+    this.favoritesService.remove(book);
     this.loadFavorites();
   }
 
   clearAllFavorites() {
-    this.fav.clear();
+    this.favoritesService.clear();
     this.loadFavorites();
+  }
+
+  goHome() {
+    this.navCtrl.navigateRoot('/home');
   }
 }
